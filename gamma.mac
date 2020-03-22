@@ -1,0 +1,24 @@
+
+/control/verbose 2
+/run/verbose 2
+
+/mygeom/setup/detectorSizeZ 1 cm
+/mygeom/setup/detectorMaterial G4_Cu 
+/testem/phys/addPhysics standard
+
+/run/initialize
+
+/process/em/fluo true
+/process/em/auger true
+
+/testem/phys/setCuts 1 nm
+
+/gps/particle gamma
+/gps/energy 356.5 keV
+/gps/direction 0 0 1
+/gps/position 0 0 -1 cm
+
+/random/setSavingFlag 1
+/random/saveThisRun
+/random/resetEngineFrom currentEvent.rndm
+/run/beamOn 3
